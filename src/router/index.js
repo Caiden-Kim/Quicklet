@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import SetsPage from "@/views/SetsPage.vue";
-import FlashcardsPage from "@/views/FlashcardsPage.vue";
-import QuizPage from "@/views/QuizPage.vue";
+import SetsPage from "@/pages/SetsPage.vue";
+import FlashcardsPage from "@/pages/FlashcardsPage.vue";
+import QuizPage from "@/pages/QuizPage.vue";
 
 const router = createRouter({
   history: createWebHashHistory(), // HASH MODE
