@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import SetsPage from "../SetsPage.vue";
-import FlashcardsPage from "../FlashcardsPage.vue";
-import QuizPage from "../QuizPage.vue";
+import SetsPage from "@/pages/SetsPage.vue";
+import FlashcardsPage from "@/pages/FlashcardsPage.vue";
+import QuizPage from "@/pages/QuizPage.vue";
 
 const routes = [
   { path: "/", component: SetsPage },
