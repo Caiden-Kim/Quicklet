@@ -22,20 +22,20 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px; /* fixed height */
   z-index: 1000;
   display: flex;
   align-items: center;
   background-color: #2b3036;
-  padding: 0.8em 1em;
-  color: #f9f5ec;
-  letter-spacing: 0.1em;
+  padding: 0 1em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   width: 60px;
   height: 60px;
-  cursor: pointer;
+  margin-right: 0.1em;
+  margin-left: 0.1em;
 }
 
 .title-block {

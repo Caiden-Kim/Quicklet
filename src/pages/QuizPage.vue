@@ -1,7 +1,6 @@
 <template>
   <div class="quiz-page">
     <h2>{{ set.title }} - Quiz</h2>
-    <p>{{ set.description }}</p>
 
     <div v-if="currentQuestion" class="quiz-card">
       <p class="word">{{ currentQuestion.word }}</p>
@@ -40,7 +39,7 @@
         <button v-if="wrongQuestions.length" @click="reviewWrong">
           Review Wrong Answers
         </button>
-        <router-link to="/">Back to Sets</router-link>
+        <router-link to="/" class="link">Back to Sets</router-link>
       </div>
     </div>
   </div>
@@ -172,6 +171,11 @@ export default {
 .quiz-page {
   text-align: center;
   padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 .quiz-card {
@@ -181,23 +185,41 @@ export default {
   border-radius: 1em;
   background-color: #373c44;
   color: #f9f5ec;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1em;
+  width: 90vw;
+  height: 65vh;
+
+  align-content: center;
 }
 
 .word {
   font-size: 2em;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-  margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows, equal height */
+  gap: 10px; /* spacing between buttons */
+  width: 100%; /* fills parent width */
+  height: 100%; /* fixed height for 2x2 layout */
 }
 
 .options button {
-  padding: 0.5em 1em;
+  margin-top: none;
+  width: 100%; /* fill width of grid cell */
+  height: 100%; /* fill height of grid cell */
+  display: flex; /* flex for content centering */
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  overflow-wrap: anywhere;
   border-radius: 0.5em;
   border: none;
   background-color: #52596e;
@@ -216,14 +238,20 @@ export default {
 }
 
 .summary {
-  margin-top: 2em;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+
+  transform: translateY(10vw);
+
+  padding: 2em;
+  gap: 0.7em;
 }
 
 .summary-buttons {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  margin-top: 1em;
 }
 
 .summary-buttons button {

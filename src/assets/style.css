@@ -18,7 +18,14 @@ body {
 }
 
 .page {
-  padding-top: 100px;
+}
+
+.link {
+  color: white;
+}
+
+.page-content {
+  padding-top: 80px; /* same as fixed header */
 }
 
 .page-title {

@@ -59,4 +59,26 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+button {
+  padding: 0.4em;
+
+  background-color: #424952;
+
+  transform: translateY(0);
+
+  color: #e2e5de;
+  font-family: RedHands;
+
+  border-radius: 0.5em;
+  border: 0.5px solid #e2e5de;
+
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #52596e;
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+</style>
